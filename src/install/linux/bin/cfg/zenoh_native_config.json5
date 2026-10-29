@@ -1,0 +1,14 @@
+// jetson: 192.168.12.13
+// rock-5t: 192.168.12.14
+{
+  mode: "peer",
+
+  connect: {
+    endpoints: ["tcp/192.168.12.13:7447"]
+  },
+
+  // 保留组播，同网段时仍可零配置发现。
+  scouting: {
+    multicast: { enabled: true }
+  }
+}
